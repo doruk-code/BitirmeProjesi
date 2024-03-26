@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.YemekDetayFragment">
+
+    <TextView
+        android:id="@+id/textViewUrunDetay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ürün Detayı"
+        android:textStyle="bold"
+        android:fontFamily="@font/archivo_narrow_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewUrun"
+        android:layout_width="247dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUrunDetay"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/textViewUrunFiyat"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/archivo_narrow_bold"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="55 TL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewUrun" />
+
+    <TextView
+        android:id="@+id/textViewUrunAdi"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/archivo_narrow_bold"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Balık"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUrunFiyat" />
+
+    <TextView
+        android:id="@+id/textViewMiktar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="21dp"
+        android:fontFamily="@font/archivo_narrow_bold"
+        android:text="1 Adet"
+        app:layout_constraintEnd_toStartOf="@+id/buttonUrunAdetArttir"
+        app:layout_constraintStart_toEndOf="@+id/buttonUrunAdetAzalt"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUrunAdi" />
+
+    <Button
+        android:id="@+id/buttonUrunAdetAzalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+
+
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#00ffffff "
+        android:text="-"
+        android:textColor="@color/yazi"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textViewMiktar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUrunAdi" />
+
+    <Button
+        android:id="@+id/buttonUrunAdetArttir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="80dp"
+        android:backgroundTint="#00ffffff "
+        android:text="+"
+        android:textColor="@color/yazi"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewMiktar"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUrunAdi" />
+
+    <Button
+        android:id="@+id/buttonSepetEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/toolbar"
+        android:fontFamily="@font/archivo_narrow_bold"
+        android:text="Sepete Ekle"
+        android:textColor="@color/yazi"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMiktar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

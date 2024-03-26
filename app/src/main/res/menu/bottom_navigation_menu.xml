@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/anasayfa"
+        android:icon="@drawable/anasayfa"  android:title="Anasayfa"     />
+
+    <item
+        android:id="@+id/destek"
+        android:icon="@drawable/support"
+        android:title="Destek" />
+
+
+    <item
+        android:id="@+id/fab"
+        android:icon="@drawable/sepet2"  android:title="Sepet"    />
+
+</menu>

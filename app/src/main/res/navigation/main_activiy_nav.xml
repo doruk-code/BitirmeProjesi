@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activiy_nav"
+    app:startDestination="@id/anasayfaFragment">
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.bitirmeprojesi.ui.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa">
+        <action
+            android:id="@+id/gecisSepet"
+            app:destination="@id/sepetFragment" />
+        <action
+            android:id="@+id/gecisDetay"
+            app:destination="@id/yemekDetayFragment" />
+        <action
+            android:id="@+id/gecisDestek"
+            app:destination="@id/destekFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.example.bitirmeprojesi.ui.fragment.SepetFragment"
+        android:label="fragment_sepet"
+        tools:layout="@layout/fragment_sepet" >
+        <argument
+            android:name="sepet"
+            app:argType="com.example.bitirmeprojesi.data.entity.Sepet" />
+        <action
+            android:id="@+id/gecisAnasayfa"
+            app:destination="@id/anasayfaFragment" />
+        <action
+            android:id="@+id/gecisDestek2"
+            app:destination="@id/destekFragment" />
+        <action
+            android:id="@+id/gectimDetaya"
+            app:destination="@id/yemekDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yemekDetayFragment"
+        android:name="com.example.bitirmeprojesi.ui.fragment.YemekDetayFragment"
+        android:label="fragment_yemek_detay"
+        tools:layout="@layout/fragment_yemek_detay" >
+        <argument
+            android:name="yemek"
+            app:argType="com.example.bitirmeprojesi.data.entity.Yemekler" />
+        <action
+            android:id="@+id/gecisAnasay"
+            app:destination="@id/anasayfaFragment" />
+        <action
+            android:id="@+id/gecisSep"
+            app:destination="@id/sepetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/destekFragment"
+        android:name="com.example.bitirmeprojesi.ui.fragment.DestekFragment"
+        android:label="fragment_destek"
+        tools:layout="@layout/fragment_destek" >
+        <action
+            android:id="@+id/gecisSepete"
+            app:destination="@id/sepetFragment" />
+        <action
+            android:id="@+id/gectimanasayfa"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+</navigation>
